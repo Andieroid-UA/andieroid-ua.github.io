@@ -12,12 +12,12 @@
         <a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
         <a-assets>
-            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/andieroid-ua/andieroid-ua.github.io/master/floatingfarm/models/Javalina.glb"></a-asset-item>
+            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/andieroid-ua/andieroid-ua.github.io/master/floatingfarm/models/Javalina.gltf"></a-asset-item>
         </a-assets>
         
-            <a-marker id="animated-marker" type='barcode' value='6'>
+            <a-marker id="animated-marker" type='pattern' value='6'>
             <a-entity
-                glb-model="#animated-asset"
+                gltf-model="#animated-asset"
                 scale="2">
             </a-entity>
         </a-marker>
