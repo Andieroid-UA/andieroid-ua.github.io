@@ -7,23 +7,24 @@
     <body style='margin : 0px; overflow: hidden;'>
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
         <a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
-
-            
+           
             
         <a-assets>
             <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/andieroid-ua/andieroid-ua.github.io/master/models/Javalina.gltf"></a-asset-item>
         </a-assets>
 
-<a-marker-camera type="pattern" patternUrl="path/to/6.patt></a-marker-camera>
             
-    <a-marker type="pattern" preset="custom" url="path/to/6.patt">
+
+        <a-marker id="animated-marker" type='barcode' value='6'>
             <a-entity
-               animation-mixer
+                animation-mixer
                 gltf-model="#animated-asset"
                 scale="2 2 2">
-</a-entity>
- </a-marker>
-                             
+            </a-entity>
+        </a-marker>
+            
+<a-entity camera></a-entity>    
+                                                  
         </a-scene>
     </body>
 </html>
